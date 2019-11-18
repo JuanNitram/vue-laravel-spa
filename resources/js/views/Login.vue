@@ -38,7 +38,7 @@
 
 <script>
     import axios from 'axios';
-    import actions from '../store/types/actionTypes';
+    // import actions from '../store/types/actionTypes';
 
     export default {
       data(){
@@ -56,10 +56,10 @@
           e.preventDefault();
 
           if (this.form.email !== '' && this.form.password !== '') {
-            axios.post('api/auth/login', this.form).then(res => {
+            axios.post('auth/login', this.form).then(res => {
               console.log(res);
             });
-            this.$store.dispatch(actions.LOGIN, this.form);
+            // this.$store.dispatch(actions.LOGIN, this.form);
           } else {
               this.errors = [];
 

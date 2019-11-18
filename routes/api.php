@@ -16,11 +16,3 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::post('/auth/login', function (Request $request){
-   Auth::attempt($request->all());
-   return response()->json([
-      'success' => true,
-       'user' => Auth::user()
-   ]);
-});
