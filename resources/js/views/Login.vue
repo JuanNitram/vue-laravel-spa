@@ -56,7 +56,7 @@
           e.preventDefault();
 
           if (this.form.email !== '' && this.form.password !== '') {
-            axios.post('auth/login', this.form).then(res => {
+            axios.post('login', this.form).then(res => {
               console.log(res);
             });
             // this.$store.dispatch(actions.LOGIN, this.form);

@@ -1936,7 +1936,7 @@ __webpack_require__.r(__webpack_exports__);
       e.preventDefault();
 
       if (this.form.email !== '' && this.form.password !== '') {
-        axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('auth/login', this.form).then(function (res) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('login', this.form).then(function (res) {
           console.log(res);
         }); // this.$store.dispatch(actions.LOGIN, this.form);
       } else {

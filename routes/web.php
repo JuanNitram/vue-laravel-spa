@@ -14,11 +14,3 @@
 use Illuminate\Http\Request;
 
 Route::get('/{any}', 'SpaController@index')->where('any', '.*');
-
-Route::post('/auth/login', function (Request $request){
-    Auth::attempt($request->all());
-    return response()->json([
-        'success' => true,
-        'user' => Auth::user()
-    ]);
-});
